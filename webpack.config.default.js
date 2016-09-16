@@ -2,18 +2,21 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const autoprefixer = require('autoprefixer');
+const precss = require('precss');
+
 module.exports = function (env) {
 
   const plugins = [
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin('css/styles.css')
+    new ExtractTextPlugin('../css/[name].bundle.css')
   ];
 
   const config =  {
     entry: {
       core: [
-        path.resolve(__dirname, 'pllug/frontend/js/entry.js'),
-        path.resolve(__dirname, 'pllug/frontend/stylesheets/common.css')
+        path.resolve(__dirname, 'pllug/frontend/stylesheets/common.css'),
+        path.resolve(__dirname, 'pllug/frontend/js/entry.js')
       ]
     },
     output: {
@@ -24,27 +27,27 @@ module.exports = function (env) {
       loaders: [{
         test: /\.js$/,
         loader: 'babel?cacheDirectory=false',
-        exclude: /node_modules/,
-        include: path.resolve(__dirname, 'pllug/frontend'),
-      },{
+        exclude: /node_modules/
+      },
+      {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', {
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader'
-        })
-      }]
-    },
-    resolve: {
-      extensions: ['.js', '.css']
-    },
-    plugins: plugins
+        loader: ExtractTextPlugin.extract(
+          'style-loader', 'css-loader', 'postcss-loader'
+        ),
+        exclude: /node_modules/
+      }
+    ]},
+    plugins: plugins,
+    postcss: () => {
+      return [autoprefixer, precss];
+    }
   };
 
   if(env === 'prod') {
     config.plugins.push(new webpack.optimize.UglifyJsPlugin());
   }
   else if(env === 'dev') {
-    config.devtool = 'source-map'
+    config.devtool = 'sourcemap'
   }
 
 
