@@ -4,6 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
+const cssImport = require('postcss-import');
+
 
 module.exports = function (env) {
 
@@ -38,8 +40,8 @@ module.exports = function (env) {
       }
     ]},
     plugins: plugins,
-    postcss: () => {
-      return [autoprefixer, precss];
+    postcss: function(){
+      return [autoprefixer, precss, cssImport];
     }
   };
 

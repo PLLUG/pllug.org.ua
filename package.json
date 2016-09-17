@@ -22,11 +22,10 @@
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "mocha": "^3.0.2",
+    "postcss-import": "^8.1.2",
+    "postcss-loader": "^0.13.0",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
-  },
-  "dependencies": {
-    "postcss-loader": "^0.13.0"
   }
 }
