@@ -3,14 +3,14 @@
 <header class="header">
   <section class="header__top">
     <section class="header__wrapper">
-      <section class="header__logo">
+      <a href="{% url 'home:index' %}" class="header__logo">
         <img src="{% static 'images/logo-img.png' %}" alt="" />
         <img src="{% static 'images/logo-title.png' %}" alt="">
-      </section>
+      </a>
       <nav class="nav header__nav">
         <li class="nav__link"><a href="#">Команда</a></li>
-        <li class="nav__link"><a href="#">Путівник</a></li>
-        <li class="nav__link"><a href="#">Блог</a></li>
+        <li class="nav__link"><a href="{% url 'home:roadmap' %}">Путівник</a></li>
+        <li class="nav__link"><a href="{% url 'blog:posts' %}">Блог</a></li>
         <li class="nav__link"><a href="#">Контакти</a></li>
       </nav>
     </section>

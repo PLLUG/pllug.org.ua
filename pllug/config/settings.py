@@ -41,6 +41,7 @@ CONTRIB_APPS = [
 
 WEB_APPS = [
     'web.home',
+    'web.blog',
 ]
 
 INSTALLED_APPS = CONTRIB_APPS + WEB_APPS
