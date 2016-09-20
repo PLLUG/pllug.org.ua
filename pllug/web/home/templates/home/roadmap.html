@@ -1,0 +1,82 @@
+{% extends 'layouts/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Roadmap
+{% endblock title %}
+
+{% block content %}
+<section class="shedule page-wrapper">
+  <h3 class="shedule__title">Розклад занять</h3>
+  <section class="cources">
+    <section class="cources__cource-item">
+      <h4 class="cource-title">
+        <img src="{% static 'images/apple.png' %}" alt="" />
+        IOS - [Objective C]
+      </h4>
+      <section class="location">
+        <img src="{% static 'images/location.png' %}" alt="">
+        <div>
+          Щосереди о 18:00
+        </div>
+        <div>
+          вул. Тарнавського 107
+        </div>
+      </section>
+    </section>
+    <section class="cources__cource-item">
+      <h4 class="cource-title">
+        <img src="{% static 'images/android.png' %}" alt="">
+        Android - [Java]
+      </h4>
+      <section class="location">
+        <img src="{% static 'images/location.png' %}" alt="">
+        <div>
+          Щосереди о 18:00
+        </div>
+        <div>
+          вул. Тарнавського 107
+        </div>
+      </section>
+    </section>
+    <section class="cources__cource-item">
+      <h4 class="cource-title">
+        <img src="{% static 'images/js.png' %}" alt="">
+        Web - [JavaScript]
+      </h4>
+      <section class="location">
+        <img src="{% static 'images/location.png' %}" alt="">
+        <div>
+          <div>
+            Щосереди о 18:00
+          </div>
+          <div>
+            вул. Тарнавського 107
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="cources__cource-item">
+      <h4 class="cource-title">
+        <img src="{% static 'images/qt.png' %}" alt="">
+        Qt - [C++]
+      </h4>
+      <section class="location">
+        <img src="{% static 'images/location.png' %}" alt="">
+        <div>
+          Щосереди о 18:00
+        </div>
+        <div>
+          вул. Тарнавського 107
+        </div>
+      </section>
+    </section>
+  </section>
+</section>
+<section class="faq">
+  <section class="page-wrapper">
+    <h3>Часті питання</h3>
+  </section>
+</section>
+{% endblock content %}

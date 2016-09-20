@@ -1,0 +1,41 @@
+
+.shedule {
+  padding: 40px 0 40px 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shedule__title {
+  padding-bottom: 20px;
+}
+
+.cources {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cources__cource-item {
+  width: 25%;
+}
+
+.cource-title {
+  padding-bottom: 30px;
+}
+
+.cource-title img {
+  float: left;
+  display: inline-block;
+  padding: 0 10px 10px 0;
+}
+
+.location {
+  float: left;
+  font-size: 14px;
+  letter-spacing: normal;
+}
+
+.location img {
+  float: left;
+  margin: 0 10px 10px 0;
+}

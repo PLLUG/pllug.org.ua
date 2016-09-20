@@ -8,6 +8,7 @@
   width: 940px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .header {
@@ -67,3 +68,4 @@
 }
 
 @import "./pages/index.css";
+@import "./pages/roadmap.css";
