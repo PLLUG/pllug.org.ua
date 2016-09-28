@@ -26,6 +26,8 @@
 
 .item__header .item__title {
   padding: 10px 0 10px 0;
+  color: #cadf6b;
+  text-transform: uppercase;
 }
 
 .item__content {
