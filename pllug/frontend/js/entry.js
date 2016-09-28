@@ -1,7 +1,16 @@
-import React from 'react';
-import { render } from 'react-dom';
+import loadScript from './loader';
 
-import PostsListContainer from './modules/PostsList';
-
-
-render(<PostsListContainer />, document.querySelector('#posts-root'));
+window.onload = function windowOnload() {
+  const allowedNames = ['blog', 'faq'];
+  const entryElem = document.querySelector('[data-entry]');
+  if(!entryElem) {
+    return;
+  }
+  const entryName = entryElem.getAttribute('data-entry');
+  const isAllowed = allowedNames.indexOf(entryName) > -1;
+  if(isAllowed) {
+    loadScript(entryName);
+  } else {
+    throw new Error('entry module not found');
+  }
+};

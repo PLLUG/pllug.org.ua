@@ -1,0 +1,8 @@
+{
+  "core": [
+    "js/entry.js",
+    "stylesheets/common.css"
+  ],
+  "blog": "js/blog.js",
+  "faq": "js/faq.js"
+}

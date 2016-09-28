@@ -5,7 +5,24 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
 const cssImport = require('postcss-import');
+const entries = require('./manifest.json');
 
+function getEntryPoints(entries) {
+  const basePath = path.join(__dirname, 'pllug/frontend');
+
+  for(var i in entries) {
+    const entry = entries[i];
+    if(typeof entry === 'string') {
+        entries[i] = path.resolve(basePath, entry);
+    } else {
+      entries[i] = entry.map(name => {
+        return path.resolve(basePath, name);
+      });
+    }
+  }
+
+  return entries;
+}
 
 module.exports = function (env) {
 
@@ -15,12 +32,7 @@ module.exports = function (env) {
   ];
 
   const config =  {
-    entry: {
-      core: [
-        path.resolve(__dirname, 'pllug/frontend/stylesheets/common.css'),
-        path.resolve(__dirname, 'pllug/frontend/js/entry.js')
-      ]
-    },
+    entry: getEntryPoints(entries),
     output: {
       path: path.join(__dirname, 'pllug/static/js'),
       filename: '[name].bundle.js'
