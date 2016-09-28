@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { formatDate } from '../../utils';
 
 
 class PostItem extends Component {
@@ -7,8 +8,8 @@ class PostItem extends Component {
     return (
       <article className="posts__item">
         <header className="item__header">
-          <h3 className="item__title">{post.title}</h3>
-          <div className="item__created-at">Написана: {post.created_at}</div>
+          <h2 className="item__title">{post.title}</h2>
+          <div className="item__created-at">Написана: {formatDate(post.created_at)}</div>
         </header>
         <section className="item__content">{post.content}</section>
       </article>

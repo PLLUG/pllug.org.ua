@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
-default LoadMoreButton extends Component {
+class LoadMoreButton extends Component {
   render() {
     const onClick = this.props.onClick;
     return (
-      <button onClick={onClick.bind(this)}>Load more</button>
+      <button className="load-more" onClick={onClick.bind(this)}>Load more</button>
     );
   }
 }

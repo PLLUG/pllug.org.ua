@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'flux/utils';
 
 import PostItem from '../PostItem';
+import LoadMoreButton from '../LoadMoreButton';
 import PostsStore from './stores';
 import { loadPosts } from './actions';
 
@@ -31,6 +32,9 @@ export class PostsList extends Component {
     return (
       <section className="blog__posts">
         <div>{postsNodes}</div>
+        <div className="blog__load-more">
+          <LoadMoreButton onClick={() => this} />
+        </div>
       </section>
     );
   }
