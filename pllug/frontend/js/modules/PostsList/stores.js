@@ -16,7 +16,8 @@ class PostsStore extends ReduceStore {
     switch (action.type) {
       case LOAD_POSTS_SUCCESS:
         return Object.assign({}, state, {
-          loading: !state.loading
+          loading: !state.loading,
+          posts: action.posts
         });
       default:
         return state;

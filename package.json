@@ -24,6 +24,7 @@
     "chai": "^3.5.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1",
     "mocha": "^3.0.2",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "flux": "^2.1.1",
+    "moment": "^2.15.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1"
   }

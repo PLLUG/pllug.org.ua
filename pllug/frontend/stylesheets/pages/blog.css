@@ -1,0 +1,26 @@
+
+.blog-wrapper {
+  width: 940px;
+  margin: 40px auto;
+}
+
+.blog-wrapper .posts-wrapper {
+  width: 70%;
+}
+
+.posts__item {
+  background: #f6f6f6;
+}
+
+.posts__item .item__header {
+  margin: 20px 10px 20px 10px;
+}
+
+.item__header .item__title {
+  padding: 10px 0 10px 0;
+}
+
+.item__content {
+  margin: 10px 10px;
+  padding-bottom: 20px;
+}

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Container } from 'flux/utils';
 
+import PostItem from '../PostItem';
 import PostsStore from './stores';
-import AppDispatcher from '../../dispatcher';
-import { LOAD_POSTS_SUCCESS } from './constants';
+import { loadPosts } from './actions';
+
 
 export class PostsList extends Component {
 
@@ -12,26 +13,25 @@ export class PostsList extends Component {
   }
 
   static calculateState(prevState) {
+    const postsState = PostsStore.getState();
     return {
-      posts: PostsStore.getState(),
+      posts: postsState.posts,
     };
   }
 
-  loadPosts() {
-    AppDispatcher.dispatch({
-      type: LOAD_POSTS_SUCCESS
-    });
+  componentWillMount() {
+    loadPosts();
   }
 
   render() {
-
-    const loading = this.state.posts.loading ? <h3>loading</h3> : null;
-
+    const posts = this.state.posts;
+    const postsNodes = Object.keys(posts).map(key => {
+      return <PostItem key={key} post={posts[key]}/>;
+    });
     return (
-      <div>
-        <h2 onClick={this.loadPosts.bind(this)}>Posts</h2>
-        <div>{loading}</div>
-      </div>
+      <section className="blog__posts">
+        <div>{postsNodes}</div>
+      </section>
     );
   }
 }

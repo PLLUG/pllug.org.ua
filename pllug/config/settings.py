@@ -39,13 +39,18 @@ CONTRIB_APPS = [
     'django.contrib.staticfiles',
 ]
 
+EXTERNALL_APPS = [
+    'rest_framework',
+]
+
 WEB_APPS = [
     'web.home',
     'web.blog',
     'web.projects',
+    'web.api',
 ]
 
-INSTALLED_APPS = CONTRIB_APPS + WEB_APPS
+INSTALLED_APPS = CONTRIB_APPS + EXTERNALL_APPS + WEB_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
