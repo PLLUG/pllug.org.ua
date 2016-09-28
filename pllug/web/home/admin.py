@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import QaItem
+
+
+class QaItemAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(QaItem, QaItemAdmin)

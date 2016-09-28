@@ -34,9 +34,11 @@
 
 .header__logo {
   padding: 10px 0 10px 0;
+  text-decoration: none;
 }
 
 .header__nav {
+  padding-top: 40px;
   display: flex;
   justify-content: space-around;
 }
@@ -69,3 +71,4 @@
 
 @import "./pages/index.css";
 @import "./pages/roadmap.css";
+@import "./pages/blog.css";
