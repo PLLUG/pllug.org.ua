@@ -1,7 +1,7 @@
 import { ReduceStore } from 'flux/utils';
 import AppDispatcher from '../../dispatcher';
 
-class FaqStore extends Component {
+class FaqStore extends ReduceStore {
   getInitialState() {
     return {
       loading: false,
