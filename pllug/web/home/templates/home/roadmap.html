@@ -7,7 +7,7 @@ Roadmap
 {% endblock title %}
 
 {% block content %}
-<section class="shedule page-wrapper">
+<section class="shedule container">
   <h3 class="shedule__title">Розклад занять</h3>
   <section class="cources">
     <section class="cources__cource-item">
@@ -16,7 +16,6 @@ Roadmap
         IOS - [Objective C]
       </h4>
       <section class="location">
-        <img src="{% static 'images/location.png' %}" alt="">
         <div>
           Щосереди о 18:00
         </div>
@@ -31,7 +30,6 @@ Roadmap
         Android - [Java]
       </h4>
       <section class="location">
-        <img src="{% static 'images/location.png' %}" alt="">
         <div>
           Щосереди о 18:00
         </div>
@@ -46,7 +44,6 @@ Roadmap
         Web - [JavaScript]
       </h4>
       <section class="location">
-        <img src="{% static 'images/location.png' %}" alt="">
         <div>
           <div>
             Щосереди о 18:00
@@ -63,7 +60,6 @@ Roadmap
         Qt - [C++]
       </h4>
       <section class="location">
-        <img src="{% static 'images/location.png' %}" alt="">
         <div>
           Щосереди о 18:00
         </div>
@@ -75,8 +71,8 @@ Roadmap
   </section>
 </section>
 <section class="faq">
-  <section class="page-wrapper" data-entry="faq">
-    <h3>Часті питання</h3>
+  <section class="container" data-entry="faq">
+    <h3 class="faq__title">Часті питання</h3>
     <section data-react-component="faq-list"></section>
   </section>
 </section>

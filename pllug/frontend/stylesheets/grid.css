@@ -1,0 +1,15 @@
+.row {
+  display: flex;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+
+@media(min-width: 940px) {
+  .container {
+    width: 940px;
+    margin: 0 auto;
+  }
+}

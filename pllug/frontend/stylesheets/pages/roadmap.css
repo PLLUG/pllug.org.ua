@@ -5,8 +5,10 @@
   align-items: center;
 }
 
-.shedule__title {
+.shedule__title, .faq__title {
   padding-bottom: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .cources {
@@ -21,6 +23,7 @@
 
 .cource-title {
   padding-bottom: 30px;
+  font-weight: 400;
 }
 
 .cource-title img {
@@ -33,6 +36,7 @@
   float: left;
   font-size: 14px;
   letter-spacing: normal;
+  font-size: 1.20rem;
 }
 
 .location img {

@@ -20,7 +20,6 @@ function getEntryPoints(entries) {
       });
     }
   }
-
   return entries;
 }
 
@@ -53,7 +52,7 @@ module.exports = function (env) {
     ]},
     plugins: plugins,
     postcss: function(){
-      return [autoprefixer, precss, cssImport];
+      return [autoprefixer(), precss, cssImport];
     }
   };
 
@@ -63,7 +62,6 @@ module.exports = function (env) {
   else if(env === 'dev') {
     config.devtool = 'sourcemap'
   }
-
 
   return config;
 };

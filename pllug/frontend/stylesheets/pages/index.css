@@ -1,24 +1,32 @@
-.index-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 40px 0 40px 0;
+
+.index-section {
+  margin: 30px 0;
 }
 
-.index-wrapper__item {
+.index-about {
+
 }
 
-.index-wrapper__item img {
+.index-about .index-about__item {
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
+  font-size: 1.20rem;
+  padding: 0 10px;
+}
+
+.index-about .index-about__item img {
   float: left;
-  padding: 0 10px 10px 0;
+  margin: 25px 15px 20px 0;
 }
 
-.team-wrapper {
-  display: flex;
-  justify-content: center;
+.index-about__item h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.index-team {
   background: #f6f6f6;
-  padding: 40px 0 40px 0;
 }
 
-.team-wrapper__item {
-  width: 10%;
+.index-team__item {
+  margin: 30px 30px;
 }

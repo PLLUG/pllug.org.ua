@@ -5,31 +5,31 @@
 {% block title %}Index{% endblock title %}
 
 {% block content %}
-<section class="index-wrapper">
-  <section class="page-wrapper">
-    <section class="index-wrapper__item">
+<section class="index-section index-about">
+  <section class="container row">
+    <section class="index-about__item col3">
       <img src="{% static 'images/more-about-pllug.png' %}" alt="">
       <h4>Більше про PLLUG</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores incidunt veniam sed dicta molestiae cum, quidem quis odio fugiat autem laborum, officiis voluptatem. Quis hic debitis cumque iusto adipisci laboriosam!</p>
     </section>
-    <section class="index-wrapper__item">
+    <section class="index-about__item col3">
       <img src="{% static 'images/calendar.png' %}" alt="">
       <h4>PLLUG програма</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores incidunt veniam sed dicta molestiae cum, quidem quis odio fugiat autem laborum, officiis voluptatem. Quis hic debitis cumque iusto adipisci laboriosam!</p>
     </section>
-    <section class="index-wrapper__item">
+    <section class="index-about__item col3">
       <img src="{% static 'images/pl-projects.png' %}" alt="">
       <h4>PLLUG проекти</h4>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores incidunt veniam sed dicta molestiae cum, quidem quis odio fugiat autem laborum, officiis voluptatem. Quis hic debitis cumque iusto adipisci laboriosam!</p>
     </section>
   </section>
 </section>
-<section class="team-wrapper">
-  <section class="page-wrapper">
-    <section class="team-wrapper__item"><img src="{% static 'images/electronics.png' %}" alt=""></section>
-    <section class="team-wrapper__item"><img src="{% static 'images/lug.png' %}" alt=""></section>
-    <section class="team-wrapper__item"><img src="{% static 'images/vakoms.png' %}" alt=""></section>
-    <section class="team-wrapper__item"><img src="{% static 'images/indeema.png' %}" alt=""></section>
+<section class="index-section index-team">
+  <section class="container row row-center">
+    <section class="index-team__item"><img src="{% static 'images/electronics.png' %}" alt=""></section>
+    <section class="index-team__item"><img src="{% static 'images/lug.png' %}" alt=""></section>
+    <section class="index-team__item"><img src="{% static 'images/vakoms.png' %}" alt=""></section>
+    <section class="index-team__item"><img src="{% static 'images/indeema.png' %}" alt=""></section>
   </section>
 </section>
 {% endblock content %}
