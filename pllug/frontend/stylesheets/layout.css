@@ -19,7 +19,14 @@ body {
 
 .main-header {
   flex: 0 0 auto;
-  height: 60px;
+  height: 585px;
+}
+
+.main-header__bg {
+  background: url('/static/images/header-background.png') no-repeat scroll;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-header__header-container {
