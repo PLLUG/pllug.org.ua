@@ -1,5 +1,6 @@
 import { ReduceStore } from 'flux/utils';
 import AppDispatcher from '../../dispatcher';
+import { LOAD_FAQ_SUCCESS } from './constants';
 
 class FaqStore extends ReduceStore {
   getInitialState() {

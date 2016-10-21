@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.shedule__title, .faq__title {
+.shedule__title, .qa__title {
   padding-bottom: 20px;
   font-weight: 400;
   text-transform: uppercase;
@@ -45,6 +45,24 @@
   margin: 0 10px 10px 0;
 }
 
-.faq {
+.qa {
   padding: 40px 0 40px 0;
+}
+
+.qa-item {
+  padding: 5px 10px;
+}
+
+.qa-item--active {
+  border-left: 2px solid red;
+}
+
+.qa-item .qa-item__question {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qa-item .qa-item__answer {
+  padding: 0;
+  margin: 5px 0 5px 15px;
 }

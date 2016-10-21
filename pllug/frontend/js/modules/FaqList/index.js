@@ -1,8 +1,15 @@
 import React, { Component, PropTypes } from 'react';
+import { Container } from 'flux/utils';
+import FaqItem from '../FaqItem';
 import FaqStore from './stores';
+import { loadFaqItems } from './actions';
 
 
 class FaqList extends Component {
+
+  componentWillMount() {
+    loadFaqItems();
+  }
 
   static getStores() {
     return [FaqStore];
@@ -18,12 +25,12 @@ class FaqList extends Component {
   render() {
     const faqItems = this.state.faqItems;
     const faqNodes = Object.keys(faqItems).map(key => {
-      return <div>Faq</div>
+      return <FaqItem item={faqItems[key]} key={key} />
     });
     return (
-      <section class="faq__list">{faqNodes}</section>
+      <section className="qa__list">{faqNodes}</section>
     );
   }
 }
 
-export default FaqList;
+export default Container.create(FaqList);
