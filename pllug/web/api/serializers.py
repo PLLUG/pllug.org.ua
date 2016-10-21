@@ -6,7 +6,9 @@ from web.home.models import QaItem
 class PostsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'title', 'content', 'created_at', 'updated_at', )
+        fields = (
+            'id', 'title', 'content', 'slug', 'created_at', 'updated_at',
+        )
 
 
 class QaItemSerializer(serializers.ModelSerializer):

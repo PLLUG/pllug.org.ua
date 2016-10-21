@@ -11,3 +11,7 @@ class Post(models.Model):
 
     def __str__(self):
         return 'Post: {}'.format(self.title)
+
+    @property
+    def slug(self):
+        return '-'.join(self.title.lower().split(' '))
