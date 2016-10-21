@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
+import { sendQuestion } from './actions';
 
 class QuestionForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       inputDisabled: true,
-      inputValue: null
+      inputValue: ''
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -13,7 +14,8 @@ class QuestionForm extends Component {
 
   handleClick(e) {
     e.preventDefault();
-    console.log(this.state.inputValue);
+    sendQuestion({ question: this.state.inputValue });
+    this.setState({ inputValue: '' });
   }
 
   handleChange(e) {
@@ -23,7 +25,7 @@ class QuestionForm extends Component {
   render() {
     return (
       <form className="question-form">
-        <input className="question-form__input" onChange={this.handleChange} />
+        <input className="question-form__input" onChange={this.handleChange} value={this.state.inputValue}/>
         <button className="question-form__button" onClick={this.handleClick}>Надіслати запитання</button>
       </form>
     );

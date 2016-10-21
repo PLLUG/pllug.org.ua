@@ -13,3 +13,9 @@ class QaItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = QaItem
         fields = ('id', 'question', 'answer', 'created_at', 'updated_at')
+        extra_kwargs = {
+            'answer': {
+                'required': False,
+                'allow_blank': True
+            }
+        }
