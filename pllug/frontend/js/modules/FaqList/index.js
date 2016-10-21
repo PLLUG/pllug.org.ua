@@ -6,7 +6,6 @@ import { loadFaqItems } from './actions';
 
 
 class FaqList extends Component {
-
   componentWillMount() {
     loadFaqItems();
   }
@@ -25,7 +24,7 @@ class FaqList extends Component {
   render() {
     const faqItems = this.state.faqItems;
     const faqNodes = Object.keys(faqItems).map(key => {
-      return <FaqItem item={faqItems[key]} key={key} />
+      return <FaqItem item={faqItems[key]} key={key} />;
     });
     return (
       <section className="qa__list">{faqNodes}</section>
