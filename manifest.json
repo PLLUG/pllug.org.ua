@@ -4,5 +4,6 @@
     "stylesheets/common.css"
   ],
   "blog": "js/blog.js",
-  "faq": "js/faq.js"
+  "faq": "js/faq.js",
+  "question-form": "js/question-form.js"
 }

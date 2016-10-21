@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d21c3692f4021e131c6d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "bbc8acbeffcc011e49e8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -602,18 +602,21 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	window.onload = function windowOnload() {
-	  var allowedNames = ['blog', 'faq'];
-	  var entryElem = document.querySelector('[data-entry]');
-	  if (!entryElem) {
-	    return;
-	  }
-	  var entryName = entryElem.getAttribute('data-entry');
-	  var isAllowed = allowedNames.indexOf(entryName) > -1;
-	  if (isAllowed) {
-	    (0, _loader2.default)(entryName);
-	  } else {
-	    throw new Error('entry module not found');
-	  }
+	  var allowedNames = ['blog', 'faq', 'question-form'];
+	  var entryElems = document.querySelectorAll('[data-entry]');
+
+	  entryElems.forEach(function (entryElem) {
+	    if (!entryElem) {
+	      return;
+	    }
+	    var entryName = entryElem.getAttribute('data-entry');
+	    var isAllowed = allowedNames.indexOf(entryName) > -1;
+	    if (isAllowed) {
+	      (0, _loader2.default)(entryName);
+	    } else {
+	      throw new Error('entry module not found');
+	    }
+	  });
 	};
 
 /***/ },
