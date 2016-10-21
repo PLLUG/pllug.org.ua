@@ -4,7 +4,8 @@ from .models import QaItem
 
 
 class QaItemAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('question', 'answer', 'created_at', 'updated_at',)
+    list_filter = ('created_at', 'updated_at',)
 
 
 admin.site.register(QaItem, QaItemAdmin)

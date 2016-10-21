@@ -5,10 +5,10 @@ from web.home.models import QaItem
 
 
 class PostsViewSet(ModelViewSet):
-    queryset = Post.objects.all()
+    queryset = Post.objects.all().order_by('-created_at')
     serializer_class = PostsSerializer
 
 
 class QaItemsViewSet(ModelViewSet):
-    queryset = QaItem.objects.all()
+    queryset = QaItem.objects.exclude(answer='').order_by('-updated_at')
     serializer_class = QaItemSerializer

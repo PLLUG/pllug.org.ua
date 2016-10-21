@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.views.generic import TemplateView
 from web.common.mixins import BaseTemplateMixin
 
