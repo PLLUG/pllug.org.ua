@@ -2,15 +2,17 @@ import fetch from 'isomorphic-fetch';
 import { LOAD_POSTS_SUCCESS } from './constants';
 import AppDispatcher from '../../dispatcher';
 
-function loadPostsSuccess(posts) {
+function loadPostsSuccess(response) {
   AppDispatcher.dispatch({
     type: LOAD_POSTS_SUCCESS,
-    posts: posts
+    posts: response.results,
+    next: response.next
   });
 }
 
-export function loadPosts() {
-  fetch('/api/v1/posts/')
+export function loadPosts(url) {
+  const fetchUrl = url || '/api/v1/posts/';
+  fetch(fetchUrl)
     .then(res => res.json())
-    .then(posts => loadPostsSuccess(posts))
+    .then(response => loadPostsSuccess(response))
 }

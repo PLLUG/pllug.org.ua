@@ -8,16 +8,19 @@ class PostsStore extends ReduceStore {
   getInitialState() {
     return {
       loading: false,
-      posts: []
+      posts: [],
+      nextUrl: null
     };
   }
 
   reduce(state, action) {
     switch (action.type) {
       case LOAD_POSTS_SUCCESS:
+        console.log(action.next);
         return Object.assign({}, state, {
           loading: !state.loading,
-          posts: action.posts
+          posts: state.posts ? state.posts.concat(action.posts) : action.posts,
+          nextUrl: action.next
         });
       default:
         return state;
