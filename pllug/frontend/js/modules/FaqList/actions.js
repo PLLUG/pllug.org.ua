@@ -2,15 +2,15 @@ import fetch from 'isomorphic-fetch';
 import AppDispatcher from '../../dispatcher';
 import { LOAD_FAQ_SUCCESS } from './constants';
 
-function loadFaqItemsSuccess(items) {
+function loadFaqItemsSuccess(response) {
   AppDispatcher.dispatch({
     type: LOAD_FAQ_SUCCESS,
-    items: items
+    items: response.results
   });
 }
 
 export function loadFaqItems() {
   fetch('/api/v1/qa_items')
     .then(res => res.json())
-    .then(items => loadFaqItemsSuccess(items));
+    .then(response => loadFaqItemsSuccess(response));
 }
