@@ -27,6 +27,7 @@ module.exports = function (env) {
 
   const plugins = [
     new webpack.NoErrorsPlugin(),
+    new webpack.optimize.DedupePlugin(),
     new ExtractTextPlugin('../css/[name].bundle.css')
   ];
 
