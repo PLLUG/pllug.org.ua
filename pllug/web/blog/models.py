@@ -15,3 +15,7 @@ class Post(models.Model):
     @property
     def slug(self):
         return '-'.join(self.title.lower().split(' '))
+
+    @property
+    def url(self):
+        return '/blog/{}'.format(self.slug)

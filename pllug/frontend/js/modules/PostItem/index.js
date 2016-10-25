@@ -8,7 +8,9 @@ class PostItem extends Component {
     return (
       <article className="posts__item">
         <header className="item__header">
-          <h2 className="item__title">{post.title}</h2>
+          <a href={post.url}>
+            <h2 className="item__title">{post.title}</h2>
+          </a>
           <div className="item__created-at">Написана: {formatDate(post.created_at)}</div>
         </header>
         <section className="item__content">{post.content}</section>
