@@ -10,5 +10,7 @@ class PostsViewSet(ModelViewSet):
 
 
 class QaItemsViewSet(ModelViewSet):
-    queryset = QaItem.objects.exclude(answer='').order_by('-updated_at')
+    queryset = QaItem.objects.exclude(
+        answer__isnull=True
+    ).exclude(answer='').order_by('-updated_at')
     serializer_class = QaItemSerializer
